@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Perfect</title>
+    <link rel="stylesheet" href="pizza.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+
+  <body>
+    <center><h1>Lerato's Perfect Pizza</h1></center>
+    <center><h2>Pizza Orders</h2></center>
+    <div class="div-cart">
+      <div  style="text-align: center;">
+        <center><i class="fa fa-shopping-cart fa-4x"></i></center>
+        <br />
+        <div x-data="{ open:false,small:0, medium:0, large:0, cost:0,sPice:67.00,mPrice:98.00,lPrice:169.00,payment:0,message:''}">
+          <span x-text="small"></span>
+          <div>
+            small <button x-on:click="[cost+=sPice,small++]" class="btn">+</button>
+
+            <button x-on:click="small>0?[cost-=sPice,small--]:0" class="btn">-</button> R67.00
+          </div>
+          <span x-text="medium"></span>
+          <div>
+            medium <button x-on:click="[cost+=mPrice,medium++]" class="btn">+</button
+            ><button x-on:click="medium>0?[cost-=mPrice,medium--]:0" class="btn">-</button> R98.00
+          </div>
+          <span x-text="large"></span>
+          <div>
+            large <button x-on:click="[cost+=lPrice,large++]" class="btn">+</button
+            ><button x-on:click="large>0?[cost-=lPrice,large--]:0" class="btn">-</button> R169
+          </div>
+          Total Cost R<span x-text="cost"></span>
+          <br />
+          <p x-text="message" x-show="open"></p>
+          <br />
+          Payment Amount <input type="text" name="" id="" x-model="payment"/>
+          <br />
+          <br />
+          <center><button @click="payment>=cost?[message='Enjoy your Pizza',open=true]:[message='Insufficient Amount',open=true]">PAY</button></center>
+        </div>
+      </div>
+    </div>
+   
+
+    <div class="flexing">
+      <div class="small-pizza">
+        <h2>Small Pizza</h2>
+        <img src="images/pizzzza.jpeg" alt="" width="125" />
+        <h3>R67.00</h3>
+        <div>
+          Creamy Tikka Veg, Cream cheese base, mush room diced, diced tomato,
+          Tikka sauce, BBQ Bacon, BBQ Sauce, Pepperoni and Olive, Spicy Chicken,
+          Mexican Sauce.
+        </div>
+      </div>
+
+      <div class="medium-pizza">
+        <h2>Medium Pizza</h2>
+        <img src="images/pizzzza.jpeg" alt="" width="175" />
+        <h3>R98.00</h3>
+        <div>
+          Creamy Tikka Veg, Cream cheese base, mush room diced, diced tomato,
+          Tikka sauce, BBQ Bacon, BBQ Sauce, Pepperoni and Olive, Spicy Chicken,
+          Mexican Sauce.
+        </div>
+      </div>
+
+      <div class="large-pizza">
+        <h2>Large Pizza</h2>
+        <img src="images/pizzzza.jpeg" alt="" width="225" />
+        <h3>R172.00</h3>
+        <div>
+          Creamy Tikka Veg, Cream cheese base, mush room diced, diced tomato,
+          Tikka sauce, BBQ Bacon, BBQ Sauce, Pepperoni and Olive, Spicy Chicken,
+          Mexican Sauce.
+        </div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <center>
+        <h2>Contact details</h2>
+
+        contact us at: 058 865 2945 info@lerato_perfect.com
+      </center>
+    </div>
+  </body>
+</html>

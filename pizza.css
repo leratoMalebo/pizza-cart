@@ -1,0 +1,69 @@
+body
+{
+    background-color: #7AE7C7;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+.btn
+{
+    margin-right: 10px;
+    margin: 5px;
+}
+
+.medium-pizza{
+    background-color: #FFF689;
+    border: 1px solid;
+    border-radius: 3em;
+    margin: 1em;
+    padding: 1em;
+    margin-left: 0em;
+    flex:1
+    
+}
+
+.large-pizza{
+    background-color: #F6E7CB;
+    border: 1px solid;
+    border-radius: 3em;
+    margin: 1em;
+    padding: 1em;
+    margin-left: 0em;
+    flex:1.6
+}
+
+.small-pizza{
+    background-color: #D6FFB7;
+    border-radius: 3em;
+    border: 1px solid;
+    margin: 1em;
+    padding: 1em;
+    margin-left: 0em;
+    flex: 0.8;
+}
+.contact{
+    background-color: #F0EC57;
+    font-weight: bold;
+    border-radius: 3em;
+    border: 2px solid;
+    margin: 0em;
+    padding: 1em;
+}
+
+.div-cart
+{
+    background-color: #F0EC57;
+}
+
+
+@media (min-width:960px)
+{
+    .flexing{
+        border-radius: 1em;
+        border: 1px solid;
+        padding: 0.5em;
+        margin: 1em;
+        display: flex;
+    }
+
+}
